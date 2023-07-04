@@ -1,0 +1,875 @@
+:root {
+    --iris: #4D5AE5;
+    --ocean: #404BBF;
+    --navy-blue: #2E2F42;
+    --slate: #434455;
+    --white: #FFFFFF;
+    --cloud: #F4F4FD;
+    --cornflower: #E7E9FC;
+    --light-slate: #8E8F99;
+    --green: #31D0AA;
+    --modal-bg: rgba(46, 47, 66, 0.40);
+    --dairy: #FCFCFC
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--slate);
+    background-color: var(--white)
+}
+
+
+
+/* ===================== Start Common components  ============ */
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.menu-link.active-link {
+    color: var(--ocean);
+}
+
+.active-link::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--ocean);
+    border-radius: 2px;
+
+}
+
+.button {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--iris);
+    background-color: var(--cloud);
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--ocean);
+    color: var(--white);
+}
+
+.title {
+    margin-bottom: 8px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+
+
+}
+
+.subtitle,
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate)
+}
+
+.section-title {
+    margin-bottom: 72px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--navy-blue);
+
+
+
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--iris);
+    color: var(--cloud);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--ocean);
+}
+
+
+.social-icon {
+    fill: currentColor;
+}
+
+/* ===================== End Common components  ============= */
+
+/* ====================== Start Header =======================*/
+.header {
+    border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 76px;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris);
+
+
+}
+
+.decor {
+    color: var(--navy-blue);
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+}
+
+
+.menu-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.menu-link {
+    position: relative;
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: var(--ocean);
+}
+
+
+.contacts {
+    display: flex;
+
+    font-style: normal;
+}
+
+.contacts-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+    color: var(--ocean);
+}
+
+/* ====================== End Header =======================*/
+
+/* ====================== Start Hero ===================== */
+.hero {
+    padding: 188px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    text-align: center;
+    background-color: var(--navy-blue);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: var(--white);
+}
+
+.hero-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
+
+    background-color: var(--iris);
+    color: var(--white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+/* ====================== End Hero ===================== */
+
+
+/* =====================  Start Advantages  ================= */
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.advantages-item {
+    width: calc((100% - 72px)/4);
+}
+
+.advantages-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
+    background-color: var(--cloud);
+}
+
+
+
+/* =======================  End Advantages  ================= */
+
+
+
+/* ======================= Start Work  ======================= */
+.work {
+    padding-top: 0;
+}
+
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px
+}
+
+.work-item {
+    width: calc((100% - 48px)/3);
+}
+
+
+/* ======================= End  Work  ======================= */
+
+/* ====================== Start Team  ======================== */
+.team {
+    background-color: var(--cloud);
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px
+}
+
+.team-item {
+    background-color: var(--white);
+    border-radius: 0px 0px 4px 4px;
+    width: calc((100% - 72px)/4);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+
+
+.team-content {
+    padding: 32px 16px;
+    text-align: center;
+}
+
+.team-position {
+    margin-bottom: 8px;
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+
+
+/* ====================== End Team  =========================== */
+
+/* ====================== Start Customers  ======================== */
+.customers-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+}
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-slate);
+    color: var(--light-slate);
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    border: 1px solid var(--ocean);
+    color: var(--ocean);
+}
+
+.customers-icon {
+    fill: currentColor;
+}
+
+
+
+/* ====================== End Customers  ======================== */
+
+
+/* ====================== Start Footer  ====================== */
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--navy-blue);
+}
+
+.footer-description {
+    max-width: 264px;
+    color: var(--cloud);
+}
+
+.logo-footer {
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-right: 0;
+}
+
+.logo-footer .decor {
+    color: var(--cloud);
+}
+
+.footer-flex {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-wrapper {
+    margin-right: 120px;
+}
+
+.footer-social {
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    color: var(--white);
+
+}
+
+.footer-social-list {
+    gap: 16px;
+}
+
+
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--green);
+}
+
+
+.subscribe-wrapper {
+    margin-left: 80px;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.subscribe-text {
+    color: var(--white);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.subscribe-input {
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--white);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: var(--white);
+}
+
+.subscribe-input::placeholder {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
+
+.subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    height: 40px;
+    color: var(--white);
+    background-color: var(--iris);
+
+}
+
+.subscribe-icon {
+    fill: var(--white);
+    margin-left: 16px;
+}
+
+/* ====================== End Footer  ======================== */
+
+
+/* ======================= Start Portfolio =================== */
+
+.portfolio {
+    padding-top: 96px;
+}
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+}
+
+.portfolio-filter .button {
+    padding: 12px 24px;
+    border: 1px solid var(--cornflower);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.portfolio-filter .button:hover,
+.portfolio-filter .button:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.portfolio-item {
+    width: calc((100% - 48px)/3);
+}
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    padding: 40px 32px;
+    background-color: var(--iris);
+    color: var(--cloud);
+    overflow: auto;
+
+    transform: translate(0, 100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
+    transform: translate(0, 0);
+}
+
+.portfolio-link {
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
+}
+
+
+
+.portfolio-item-content {
+    padding: 32px 16px;
+    border: 1px solid var(--cornflower);
+    border-top: 0;
+}
+
+/* ======================= End Portfolio ====================== */
+
+/* ======================= Start Modal ======================= */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--modal-bg);
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    padding: 72px 24px 24px 24px;
+
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 584px;
+
+    border-radius: 4px;
+    background-color: var(--dairy);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
+
+.button-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: var(--cornflower);
+    color: var(--navy-blue);
+    cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.button-close:hover,
+.button-close:focus {
+    border: none;
+}
+
+.icon-close {
+    fill: currentColor;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+
+
+.modal-text {
+    text-align: center;
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--navy-blue);
+}
+
+.input-text {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+    color: var(--light-slate);
+}
+
+
+
+.modal-form-part {
+    margin-bottom: 8px;
+}
+
+.modal-form-part.policy {
+    margin-bottom: 24px;
+}
+
+.modal-form-part.textarea {
+    margin-bottom: 16px;
+}
+
+.modal-position-wrapper {
+    position: relative;
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--modal-bg);
+    padding: 8px 16px 8px 38px;
+    font-size: 12px;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus,
+.modal-input:hover {
+    outline: none;
+    border-color: var(--iris)
+}
+
+.modal-input:focus+.input-img,
+.modal-input:hover+.input-img {
+    fill: var(--iris)
+}
+
+
+
+.modal-comment {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 8px 16px;
+
+    line-height: 1.17;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--modal-bg);
+    background-color: transparent;
+    outline: transparent;
+    border-radius: 4px;
+    border: 1px solid var(--modal-bg);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+
+    color: var(--navyblue-modal, rgba(46, 47, 66, 0.40));
+
+}
+
+.modal-comment:focus,
+.modal-comment:hover {
+    outline: none;
+    border-color: var(--iris)
+}
+
+.input-img {
+    fill: var(--navy-blue);
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.form-policy-check {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--light-slate)
+}
+
+.form-policy-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    border-radius: 2px;
+    border: 1px solid var(--modal-bg);
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.accept-policy:checked+.form-policy-check .form-policy-icon {
+    background-color: var(--ocean);
+    border: none;
+    fill: var(--cloud)
+}
+
+.accept-policy:checked+.form-policy-check .form-policy-icon,
+.accept-policy:hover+.form-policy-check .form-policy-icon,
+.accept-policy:focus+.form-policy-check .form-policy-icon {
+    border-color: var(--iris);
+}
+
+.privacy-policy {
+    color: var(--iris)
+}
+
+
+
+.modal-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+    background-color: var(--iris);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/* ======================= End  Modal ======================= */
